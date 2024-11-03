@@ -30,9 +30,7 @@ header {
 
 .navbar {
     grid-area: navbar;
-    gap: 20;
     height: 10vh;
-    /* background-color: darkorange; */
     border: solid black thin;
 }
 
@@ -56,16 +54,35 @@ li {
     justify-content: center;
 }
 
+li .pipe {
+    height: 60%;
+    width: 4px;
+    background-color: black;
+}
+
+li .img_log {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+li .img_cad {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
 .banner {
     grid-area: banner;
-    /* background-color: aqua; */
     height: 35vh;
-    /* background-size: cover;
-    background-repeat: no-repeat; */
+    padding: 5rem 0 0 0;
 }
 
 .banner img {
-    /* background-image: url("/Assets/image 8.png"); */
     height: 35vh;
     width: 120vh;
 }
