@@ -89,8 +89,13 @@ li .img_cad {
 
 .arquivos {
     grid-area: section_a;
-    background-color: chartreuse;
-    height: 90vh;
+    /* background-color: chartreuse; */
+    height: 90%;
+}
+
+.arquivos img {
+    height: 100%;
+    width: 70%;
 }
 
 .sobre {
