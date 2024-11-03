@@ -100,8 +100,13 @@ li .img_cad {
 
 .sobre {
     grid-area: section_s;
-    background-color: blue;
-    height: 90vh;
+    /* background-color: blue; */
+    height: 100%;
+}
+
+.sobre img {
+    height: 100%;
+    width: 75%;
 }
 
 .contato {
