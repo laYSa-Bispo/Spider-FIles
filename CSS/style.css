@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'navbar'
+    'banner'
+    'section_a'
+    'section_s'
+    'section_c'
+    'footer';
+    gap: 10px;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    background-color: red;
+    height: 40vh;
+    background-image: url("/Assets/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    grid-area: navbar;
+    gap: 0;
+    height: 10vh;
+    background-color: darkorange;
+}
+
+.banner {
+    grid-area: banner;
+    /* background-color: aqua; */
+    height: 35vh;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+
+.banner img {
+    /* background-image: url("/Assets/image 8.png"); */
+    height: 35vh;
+    width: 120vh;
+}
+
+.arquivos {
+    grid-area: section_a;
+    background-color: chartreuse;
+    height: 90vh;
+}
+
+.sobre {
+    grid-area: section_s;
+    background-color: blue;
+    height: 90vh;
+}
+
+.contato {
+    grid-area: section_c;
+    background-color: yellow;
+    height: 70vh;
+}
+
+footer {
+    grid-area: footer;
+    background-color: gray;
+    height: 15vh;
+}
