@@ -3,9 +3,7 @@ USE Spider_Files;
 
 CREATE TABLE Usuario (
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
-Nome VARCHAR(45),
-Sobrenome VARCHAR(45),
+Usuario VARCHAR(45),
 Email VARCHAR(100),
-Nickname VARCHAR(45),
 Senha VARCHAR(30)
 );
