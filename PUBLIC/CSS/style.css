@@ -139,7 +139,7 @@ footer {
     background-repeat: no-repeat;
 }
 
-.div_left {
+.div_leftLogin {
     display: flex;
     /* background-color: aqua; */
     height: 100vh;
@@ -148,13 +148,13 @@ footer {
     align-items: center;
 }
 
-.div_left img {
+.div_leftLogin img {
     height: 80%;
     width: 50%;
     margin-left: 150px;
 }
 
-.div_right {
+.div_rightLogin {
     display: flex;
     /* background-color: magenta; */
     height: 100vh;
@@ -163,7 +163,7 @@ footer {
     align-items: center;
 }
 
-.div_right .div_login {
+.div_rightLogin .div_login {
     display: flex;
     flex-direction: column;
     background: rgb(255,255,255);
@@ -179,33 +179,33 @@ footer {
     /* opacity: 0.9; */
 }
 
-.div_right .div_login .div_boxLogin {
+.div_rightLogin .div_login .div_boxLogin {
     /* border: solid orange; */
     height: 80%;
     width: 70%;
 }
 
-.div_right .div_login .div_boxLogin h1 {
+.div_rightLogin .div_login .div_boxLogin h1 {
     font-family: "Fredericka the Great", serif;
     font-size: 60px;
     font-weight: lighter;
 }
 
-.campo {
+.campoLogin {
     /* border: solid rgb(23, 224, 23); */
     display: flex;
     flex-direction: column;
     padding: 3rem 0 ;
 }
 
-.campo input {
+.campoLogin input {
     border-radius: 10px;
     height: 55px;
     background-color: white;
     border: none;
 }
 
-.campo span {
+.campoLogin span {
     width: 100%;
     /* border: solid red; */
     text-align: start;
@@ -213,7 +213,7 @@ footer {
     font-size: 30px;
 }
 
-.campo button {
+.campoLogin button {
     font-family: "Aboreto", system-ui;
     background-color: white;
     height: 55px;
@@ -227,3 +227,11 @@ footer {
 }
 
 /* CADASTRO */
+
+#container_cad {
+    display: flex;
+    flex-direction: row;
+    background-image: url('../Assets/bg_cadastro.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
