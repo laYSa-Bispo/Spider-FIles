@@ -265,8 +265,8 @@ footer {
     flex-direction: column;
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(102,102,102,0.3554213921896884) 96%);
-    height: 80%;
-    width: 80%;
+    height: 85%;
+    width: 90%;
     justify-content: center;
     align-items: center;
     text-align: center;
