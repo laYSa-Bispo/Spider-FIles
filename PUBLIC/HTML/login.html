@@ -24,14 +24,14 @@
                         <h1>Login</h1>
                         <div class="campoLogin">
                             <span>Usuário:</span> 
-                            <input type="text" id="ipt_user">
+                            <input type="text" id="ipt_email">
                         </div>
                         <div class="campoLogin">
                             <span>Senha:</span>
                             <input type="password" id="ipt_senha">
                         </div>
                         <div class="campoLogin">
-                            <button>Entrar</button>
+                            <button onclick="entrar()">Entrar</button>
                         </div>
                         <div class="red_cad">
                             <span>Não possui Login? Realize seu <a href="/PUBLIC/HTML/cadastro.html" style="color: red;">Cadastro</a> já.</span>
@@ -51,14 +51,10 @@
 <script>
 
     function entrar() {
-        aguardar();
-
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var emailVar = ipt_email.value;
+        var senhaVar = ipt_senha.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
             finalizarAguardar();
             return false;
         }
@@ -87,13 +83,12 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
+                    sessionStorage.EMAIL_USUARIO = json.Email;
+                    sessionStorage.NOME_USUARIO = json.Usuario;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "dashboard.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -116,7 +111,6 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
     }
 
 </script>
