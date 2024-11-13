@@ -36,7 +36,7 @@
                         <input type="password" id="ipt_confirmar">
                     </div>
                     <div class="campoCad" >
-                        <button onclick="cadastrar()">✔</button>
+                        <button style="cursor: pointer;" onclick="cadastrar()">✔</button>
                     </div>
                     <div class="red_login">
                       <span>Já possui Cadastro? Faça <a href="login.html" style="color: red;">Login</a> agora.</span>
@@ -78,25 +78,6 @@
       ) {
         return false;
       }
-  
-      // // Validar os campos do formulário
-      // if (nomeVar.length > 1) {
-      //   cardErro.style.display = "block";
-      //   mensagem_erro.innerHTML =
-      //     "(O nome deve conter mais de um caracter)";
-      // } else if (!emailVar.Includes('@') || !emailVar.Includes('.')) {
-      //   cardErro.style.display = "block";
-      //   mensagem_erro.innerHTML =
-      //     "(O email deve conter '@' e '.')";
-      // } 
-  
-      //   
-      //   return false;
-      // } else {
-      //   setInterval(sumirMensagem, 5000);
-      // }
-  
-
   
       // Enviando o valor da nova input
       fetch("/usuarios/cadastrar", {
