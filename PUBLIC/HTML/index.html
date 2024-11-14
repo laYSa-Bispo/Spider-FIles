@@ -15,10 +15,10 @@
         <header class="header"></header>
         <div class="navbar">
             <div class="buttons_nav">
-                <li>Home</li>
-                <li>Arquivos</li>
-                <li>Sobre</li>
-                <li>Contato</li>
+                <li><a href="">Home</a></li>
+                <li><a href="#arquivos">Arquivos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
                 <li>
                     <div style="cursor: pointer;" class="img_log">
                         <a href="login.html"><img src="../Assets/icon_log.png" alt="icon de login"></a>
@@ -33,13 +33,13 @@
         <div class="banner">
             <img src="../Assets/image 8.png" alt="banner da home">
         </div>
-        <section class="arquivos">
-            <img src="../Assets/arquivos.png" alt="slider arquivos">
+        <section class="arquivos" id="arquivos">
+            <img src="../Assets/arquivos.png" alt="portal de arquivos">
         </section>
-        <section class="sobre">
+        <section class="sobre" id="sobre">
             <img src="../Assets/sobre.png" alt="seção sobre">
         </section>
-        <section class="contato">
+        <section class="contato" id="contato">
             <div class="box_contato">
                 <div class="titulo_contato">
                     <h1>Contate-Nos</h1>
@@ -51,7 +51,7 @@
                     <input type="text" id="ipt_nomeCtt" placeholder=" Nome...">
                     <input type="text" id="ipt_emailCtt" placeholder=" Email...">
                     <textarea id="textarea_msg" maxlength="240" rows="5" placeholder=" Mensagem..."></textarea>
-                    <button>Enviar</button>
+                    <button style="cursor: pointer;" >Enviar</button>
                 </div>
             </div>
         </section>

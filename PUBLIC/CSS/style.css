@@ -82,6 +82,11 @@ li .img_cad {
     align-items: center;
 }
 
+.buttons_nav a {
+    color: black;
+    text-decoration: none;
+} 
+
 .banner {
     grid-area: banner;
     height: 35vh;
