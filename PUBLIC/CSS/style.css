@@ -118,7 +118,71 @@ li .img_cad {
 .contato {
     grid-area: section_c;
     background-color: yellow;
-    height: 70vh;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.box_contato {
+    border: solid black 4px;
+    width: 30%;
+    height: 85%;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+}
+
+.box_contato .banner_contato {
+    background-color: white;
+    align-content: center;
+    height: 30%;
+}
+
+.box_contato .banner_contato img {
+    width: 75%;
+    height: 70%;
+}
+
+.box_contato .form_contato {
+    /* border: solid pink; */
+    background-color: #A50034;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
+    align-self: center;
+    width: 100%;
+    height: 65%;
+    gap: 10px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.box_contato .form_contato input {
+    width: 80%;
+    height: 40px;
+    font-family: "Anonymous Pro";
+    font-size: 25px;
+    border: solid black;
+}
+
+.box_contato .form_contato textarea {
+    width: 80%;
+    height: 200px;
+    font-family: "Anonymous Pro";
+    font-size: 25px;
+    border: solid black;
+}
+
+.box_contato .form_contato button {
+    width: 25%;
+    height: 40px;
+    font-family: "Anonymous Pro";
+    font-size: 25px;
+    background-color: white;
+    font-weight: bold;
+    border: solid black;
 }
 
 footer {
