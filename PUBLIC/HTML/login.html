@@ -74,10 +74,11 @@
             console.log("ESTOU NO THEN DO entrar()!")
             
             if (resposta.ok) {
-                console.log(resposta);
+               console.log("A resposta veio " )
 
                 resposta.json().then(json => {
                     console.log(json);
+                    console.log("Entrou aqui caraio");
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.Email;
                     sessionStorage.NOME_USUARIO = json.Usuario;
