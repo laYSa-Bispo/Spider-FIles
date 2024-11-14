@@ -123,8 +123,10 @@ li .img_cad {
 
 footer {
     grid-area: footer;
-    background-color: gray;
+    background-color: black;
     height: 15vh;
+    align-content: center;
+    color: white;
 }
 
 
