@@ -117,7 +117,7 @@ li .img_cad {
 
 .contato {
     grid-area: section_c;
-    background-color: yellow;
+    /* background-color: yellow; */
     height: 80vh;
     align-items: center;
     justify-content: center;
@@ -137,9 +137,18 @@ li .img_cad {
 .box_contato .titulo_contato {
     position: absolute;
     border: solid black;
+    background-color: white;
     height: 70px;
     width: 300px;
     align-content: center;
+    right: 23%;
+    bottom: 94%;
+}
+
+.box_contato .titulo_contato h1 {
+    font-family: "Fredericka the Great", serif;
+    font-size: 45px;
+    font-weight: lighter;
 }
 
 .box_contato .banner_contato {
