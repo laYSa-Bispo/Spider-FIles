@@ -131,6 +131,15 @@ li .img_cad {
     align-self: center;
     align-items: center;
     align-content: center;
+    position: relative;
+}
+
+.box_contato .titulo_contato {
+    position: absolute;
+    border: solid black;
+    height: 70px;
+    width: 300px;
+    align-content: center;
 }
 
 .box_contato .banner_contato {
@@ -149,14 +158,12 @@ li .img_cad {
     background-color: #A50034;
     display: flex;
     flex-direction: column;
-    /* align-content: center; */
     align-items: center;
     align-self: center;
     width: 100%;
     height: 65%;
     gap: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 2rem;
 }
 
 .box_contato .form_contato input {
