@@ -94,8 +94,8 @@ li .img_cad {
 }
 
 .banner img {
-    height: 35vh;
-    width: 120vh;
+    height: 30vh;
+    width: 110vh;
 }
 
 .arquivos {
@@ -121,6 +121,11 @@ li .img_cad {
     height: 50%;
     width: 50%;
     align-self: center;
+}
+
+.div_portal a {
+    height: 100%;
+    width: 100%;
 }
 
 .div_portal img:hover {
