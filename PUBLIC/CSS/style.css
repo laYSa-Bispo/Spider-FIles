@@ -27,7 +27,7 @@
 
 header {
     grid-area: header;
-    background-color: red;
+    /* background-color: red; */
     height: 40vh;
     background-image: url("../Assets/header.png");
     background-size: cover;
@@ -101,12 +101,30 @@ li .img_cad {
 .arquivos {
     grid-area: section_a;
     /* background-color: chartreuse; */
-    height: 90%;
+    height: 90vh;
+    background-image: url("/PUBLIC/Assets/arquivos.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
 }
 
-.arquivos img {
-    height: 100%;
-    width: 70%;
+.div_portal {
+    /* border: solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_portal img {
+    height: 50%;
+    width: 50%;
+    align-self: center;
+}
+
+.div_portal img:hover {
+    border: aliceblue;
 }
 
 .sobre {

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fredericka+the+Great&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fredericka+the+Great&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#container_arquivos{
+    display: grid;
+    grid-template-areas: 
+    'header'
+    'navbar'
+    'section_hq'
+    'section_filmes'
+    'section_desenhos'
+    'section_jogos'
+    'footer';
+    gap: 30px;
+    text-align: center;
+}
+
+header {
+    grid-area: header;
+    /* background-color: red; */
+    height: 40vh;
+    background-image: url("../Assets/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    grid-area: navbar;
+    height: 10vh;
+    border: solid black thin;
+}
+
+.buttons_nav {
+    display: flex;
+    display: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+li {
+    display: flex;
+    list-style: none;
+    font-family: "Aboreto", system-ui;
+    font-size: xx-large;
+    height: 100%;
+    align-items: center;
+    border: solid black thin;
+    width: 270px;
+    justify-content: center;
+}
+
+.buttons_nav a {
+    color: black;
+    text-decoration: none;
+} 
