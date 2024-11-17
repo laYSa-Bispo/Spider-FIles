@@ -14,6 +14,7 @@
     grid-template-areas: 
     'header'
     'navbar'
+    'section_personagens'
     'section_hq'
     'section_filmes'
     'section_desenhos'
@@ -62,3 +63,47 @@ li {
     color: black;
     text-decoration: none;
 } 
+
+.personagens {
+    grid-area: section_personagens;
+    height: 90vh;
+    align-content: center;
+    background-color:deeppink;
+}
+
+.hq {
+    grid-area: section_hq;
+    height: 90vh;
+    align-content: center;
+    background-color: aqua;
+}
+
+.filmes {
+    grid-area: section_filmes;
+    height: 90vh;
+    align-content: center;
+    background-color: blueviolet;
+}
+
+.desenhos {
+    grid-area: section_desenhos;
+    height: 90vh;
+    align-content: center;
+    background-color: crimson;
+}
+
+.jogos {
+    grid-area: section_jogos;
+    height: 90vh;
+    align-content: center;
+    background-color: darksalmon;
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    height: 15vh;
+    align-content: center;
+    color: white;
+}
+
