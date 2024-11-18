@@ -121,15 +121,19 @@ li .img_cad {
     height: 50%;
     width: 50%;
     align-self: center;
+    
+}
+
+.div_portal img:hover {
+    border: solid aliceblue;
+    border-radius: 3rem;
+    transform: scale(1.05);
+    box-shadow: 0 1.5rem 1rem -0.75rem hsla(0, 100%, 100%, 0.25);
 }
 
 .div_portal a {
     height: 100%;
     width: 100%;
-}
-
-.div_portal img:hover {
-    border: aliceblue;
 }
 
 .sobre {
