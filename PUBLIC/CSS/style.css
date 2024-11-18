@@ -147,7 +147,7 @@ li .img_cad {
 
 .slider {
     display: flex;
-    aspect-ratio: 17/10;
+    aspect-ratio: 2/1.19;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
