@@ -136,11 +136,51 @@ li .img_cad {
     grid-area: section_s;
     /* background-color: blue; */
     height: 100%;
+    padding: 2rem;
 }
 
-.sobre img {
-    height: 100%;
-    width: 75%;
+.slider-wrapper {
+    position: relative;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 17/10;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.slider img {
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav {
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #c3c0c0;
+    opacity: 0.5;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover {
+    opacity: 1;
 }
 
 .contato {
