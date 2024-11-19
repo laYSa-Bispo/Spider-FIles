@@ -27,7 +27,7 @@
             </div>
             <section id="personagens" class="personagens">
                 <div class="div_titulo">
-                    <h1 class="h1_titulo">Personagens</h1>
+                    <h1 class="h1_titulo">Spiders</h1>
                 </div>
                 <br>
                 <br>
@@ -69,3 +69,24 @@
 </body>
 
 </html>
+
+<script>
+
+    const initSlider = () => {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+
+
+        // PASSA AS IMAGENS DE ACORDO COM O BOTÃO CLICKADO
+        slideButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const direction = button.id === "prev-slide" ? -1 : 1;
+                const scrollAmount = imageList.clientWidth * direction;
+                imageList.scrollBy({left: scrollAmount, behavior: "smooth"});
+            })
+        })
+    }
+
+    window.addEventListener("load", initSlider);
+
+</script>

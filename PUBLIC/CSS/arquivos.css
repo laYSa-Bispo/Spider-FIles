@@ -22,14 +22,13 @@
     'section_jogos'
     'footer';
     gap: 30px;
-    text-align: center;
 }
 
 header {
     grid-area: header;
     /* background-color: red; */
     height: 40vh;
-    background-image: url("../Assets/header.png");
+    background-image: url("../Assets/header_arquivos.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -67,8 +66,9 @@ li {
 
 .div_titulo .h1_titulo {
     display: flex;
-    font-family: "Fredericka the Great", serif;
-    font-size: 100px;
+    font-family: "Aboreto", system-ui;
+    font-size: xx-large;
+    font-size: 80px;
     font-weight: lighter;
     text-align: center;
     justify-content: center;
@@ -76,11 +76,15 @@ li {
     padding: 2rem;
 }
 
+.slider-wrapper {
+    position: relative;
+}
+
 .slider-wrapper .slide-button {
     position: absolute;
-    top: 115%;
-    height: 50px;
-    width: 50px;
+    top: 50%;
+    height: 60px;
+    width: 60px;
     color: #fff;
     border: none;
     outline: none;
@@ -91,12 +95,16 @@ li {
     transform: translateY(-50%);
 }
 
+.slider-wrapper .slide-button:hover {
+    background: #444;
+}
+
 .slider-wrapper .slide-button#prev-slide {
-    left: -20px;
+    left: -30px;
 }
 
 .slider-wrapper .slide-button#next-slide {
-    right: -20px;
+    right: -10px;
 }
 
 .slider-wrapper .image-list {
@@ -107,7 +115,7 @@ li {
     overflow-x: auto;
     scrollbar-width: none;
     grid-template-columns: repeat(10, 1fr);
-    max-width: 1850px;
+    max-width: 1500px;
     width: 95%;
 }
 
@@ -123,7 +131,7 @@ li {
 
 .personagens .slider-scrollbar {
     height: 24px;
-    width: 1850px;
+    width: 1500px;
     /* background: blue; */
     display: flex;
     align-items: center;
@@ -132,7 +140,7 @@ li {
 .slider-scrollbar .scrollbar-track {
     position: relative;
     height: 6px;
-    width: 1850px;
+    width: 1500px;
     background: #ccc;
     border-radius: 4px;
 }
@@ -144,7 +152,7 @@ li {
 .slider-scrollbar .scrollbar-thumb {
     position: absolute;
     height: 100%;
-    width: 925px;
+    width: 850px;
     background: #000000;
     border-radius: inherit;
     cursor: grab;
@@ -173,7 +181,7 @@ li {
     justify-content: center;
     height: 90vh;
     align-content: center;
-    background-color:deeppink;
+    /* background-color:deeppink; */
 }
 
 .hq {
