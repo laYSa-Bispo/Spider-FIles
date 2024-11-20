@@ -30,8 +30,8 @@
                     <h1 class="h1_titulo">Spiders</h1>
                 </div>
                 <div class="slider-wrapper">
-                    <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
-                    <div class="image-list">
+                    <button id="prev-slide1" class="slide-button material-symbols-rounded">chevron_left</button>
+                    <div class="image-list" id="slider1">
                         <img class="image-item" src="/PUBLIC/Assets/card_peter.jpg" alt="Card do Peter">
                         <img class="image-item" src="/PUBLIC/Assets/card_miles.jpg" alt="Card do Miles">
                         <img class="image-item" src="/PUBLIC/Assets/card_gwen.jpg" alt="Card da Gwen">
@@ -46,14 +46,29 @@
                     </div>
                     <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
                 </div>
-                <div class="slider-scrollbar">
-                    <div class="scrollbar-track">
-                        <div class="scrollbar-thumb">
-                        </div>
+            </section>
+            <section id="hq" class="hq">
+                <div class="div_titulo">
+                    <h1 class="h1_titulo">HQ's</h1>
+                </div>
+                <div class="slider-wrapper">
+                    <button id="prev-slide2" class="slide-button material-symbols-rounded">chevron_left</button>
+                    <div class="image-list" id="slider2"> 
+                        <img class="image-item" src="/PUBLIC/Assets/card_peter.jpg" alt="Card do Peter">
+                        <img class="image-item" src="/PUBLIC/Assets/card_miles.jpg" alt="Card do Miles">
+                        <img class="image-item" src="/PUBLIC/Assets/card_gwen.jpg" alt="Card da Gwen">
+                        <img class="image-item" src="/PUBLIC/Assets/card_robbie.jpg" alt="Card do Robbie">
+                        <img class="image-item" src="/PUBLIC/Assets/card_miguel.jpg" alt="Card do Miguel">
+                        <img class="image-item" src="/PUBLIC/Assets/card_peni.jpg" alt="Card da Peni">
+                        <img class="image-item" src="/PUBLIC/Assets/card_india.jpg" alt="Card do Pavitr">
+                        <img class="image-item" src="/PUBLIC/Assets/card_noir.jpg" alt="Card do Noir">
+                        <img class="image-item" src="/PUBLIC/Assets/card_silk.jpg" alt="Card da Silk">
+                        <img class="image-item" src="/PUBLIC/Assets/card_woman.jpg" alt="Card da Jessica">
+                        <img class="image-item" src="/PUBLIC/Assets/card_ham.jpg" alt="Card do Ham">
                     </div>
+                    <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
                 </div>
             </section>
-            <section id="hq" class="hq">hq</section>
             <section id="filmes" class="filmes">filmes</section>
             <section id="desenhos" class="desenhos">desenhos</section>
             <section id="jogos" class="jogos">jogos</section>
@@ -71,37 +86,43 @@
 <script>
 
     const initSlider = () => {
-        const imageList = document.querySelector(".slider-wrapper .image-list");
-        const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-        const sliderScrollbar = document.querySelector(".personagens .slider-scrollbar");
-        const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth; 
+        const slider1 = document.getElementById("slider1");
+        const slider2 = document.getElementById("slider2");
+        
 
+        const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+        const maxScrollLeft = slider1.scrollWidth - slider1.clientWidth; 
 
         // PASSA AS IMAGENS DE ACORDO COM O BOTÃO CLICKADO
         slideButtons.forEach(button => {
             button.addEventListener("click", () => {
-                const direction = button.id === "prev-slide" ? -1 : 1;
-                const scrollAmount = imageList.clientWidth * direction;
-                imageList.scrollBy({left: scrollAmount, behavior: "smooth"});
+                if((button.parentElement).querySelector("#slider1")) {
+                    const direction = button.id === "prev-slide1" ? -1 : 1;
+                    const scrollAmount = slider1.clientWidth * direction;
+                    slider1.scrollBy({left: scrollAmount, behavior: "smooth"});
+                }
+                
+                if((button.parentElement).querySelector("#slider2")) {
+                    const direction = button.id === "prev-slide2" ? -1 : 1;
+                    const scrollAmount = slider2.clientWidth * direction;
+                    slider2.scrollBy({left: scrollAmount, behavior: "smooth"});
+                }
+
+
+
+                
             })
         })
-
-        const handleSlideButtons = () => {
-            slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "block"; 
-            slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "block"; 
-        }
-
-        // ATUALIZA A POSIÇÃO DA BARRA DESLIZANTE BASEADO NO SCROLL DA IMAGEM
-        const updateScrollThumbPosition = () => {
-            const scrollPosition = imageList.scrollLeft;
-            const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-            scrollbarThumb.style.left = `${thumbPosition}px`
-        }
-
-        imageList.addEventListener("scroll", () => {
+        
+        // const handleSlideButtons = () => {
+        //     slideButtons[0].style.display = slider1.scrollLeft <= 0 ? "none" : "block"; 
+        //     slideButtons[1].style.display = slider1.scrollLeft >= maxScrollLeft ? "none" : "block"; 
+        //     slideButtons[2].style.display = slider2.scrollLeft <= 0 ? "none" : "block"; 
+        //     slideButtons[3].style.display = slider2.scrollLeft >= maxScrollLeft ? "none" : "block"; 
+        // }
+        
+        slider1.addEventListener("scroll", () => {
             handleSlideButtons();
-            updateScrollThumbPosition();
         })
     }
 

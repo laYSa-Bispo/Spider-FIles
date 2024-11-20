@@ -114,45 +114,32 @@ li {
     font-size: 0;
     margin-bottom: 30px;
     overflow-x: auto;
-    scrollbar-width: none;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     max-width: 1500px;
     width: 95%;
+    padding: 20px 0;
 }
 
 .slider-wrapper .image-list::-webkit-scrollbar {
-    display: none;
+    height: 8px;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar-thumb:hover {
+    cursor: grab;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
 }
 
 .slider-wrapper .image-list .image-item {
     width: 325px;
     height: 500px;
     object-fit: cover;
-}
-
-.personagens .slider-scrollbar {
-    height: 24px;
-    width: 1500px;
-    /* background: blue; */
-    display: flex;
-    align-items: center;
-}
-
-.slider-scrollbar .scrollbar-track {
-    position: relative;
-    height: 6px;
-    width: 1500px;
-    background: #ccc;
-    border-radius: 4px;
-}
-
-.slider-scrollbar .scrollbar-thumb {
-    position: absolute;
-    height: 100%;
-    width: 700px;
-    background: #000000;
-    border-radius: inherit;
-    /* cursor: grab; */
 }
 
 .personagens {
@@ -168,6 +155,10 @@ li {
 
 .hq {
     grid-area: section_hq;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
     align-content: center;
     background-color: aqua;
@@ -175,6 +166,10 @@ li {
 
 .filmes {
     grid-area: section_filmes;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
     align-content: center;
     background-color: blueviolet;
@@ -182,6 +177,10 @@ li {
 
 .desenhos {
     grid-area: section_desenhos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
     align-content: center;
     background-color: crimson;
@@ -189,6 +188,10 @@ li {
 
 .jogos {
     grid-area: section_jogos;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 90vh;
     align-content: center;
     background-color: darksalmon;
