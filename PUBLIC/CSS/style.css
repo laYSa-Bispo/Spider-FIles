@@ -102,7 +102,7 @@ li .img_cad {
     grid-area: section_a;
     /* background-color: chartreuse; */
     height: 90vh;
-    background-image: url("/PUBLIC/Assets/arquivos.png");
+    background-image: url("../Assets/arquivos.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
