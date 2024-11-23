@@ -11,34 +11,116 @@
 
 <body>
 
-<main class="main_dashboard">
+    <main class="main_dashboard">
 
-<div class="container_dashboard">
-    <div class="box_dashboard">
-        <div class="div_titulo">
-            <h1>Dashboard</h1>
-        </div>
-        <div class="div_dashboard">
-            <div class="dash_left">
-                <div class="div_grafico"></div>
+        <div class="container_dashboard">
+            <div class="box_dashboard">
+                <div class="div_titulo">
+                    <h1>Dashboard</h1>
+                </div>
+                <div class="div_dashboard">
+                    <div class="dash_left">
+                        <div class="box_grafico">
+                            <div class="grafico">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dash_right">
+                        <div class="div_kpi"></div>
+                        <div class="div_imagem"></div>
+                    </div>
+                </div>
             </div>
-            <div class="dash_right">
-                <div class="div_kpi"></div>
-                <div class="div_imagem"></div>
-            </div>
+
+
         </div>
-    </div>
-    
 
-</div>
-
-</main>
+    </main>
 
 </body>
 
 </html>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script>
+
+    // GRÁFICOS DA DASHBOARD
+    const ctx = document.getElementById('myChart');
+
+
+    const labels = ['Spider-Man (Peter Parker)',
+        'Spider-Man (Miles Morales)',
+        'Ghost Spider (Gwen Stacy)',
+        'Spider-Punk (Robbie Brown)',
+        'Spider-Man 2099 (Miguel O`Hara)',
+        'SP//dr (Peni Parker)',
+        'Spider-Man India (Pavitr Prabhakar)',
+        'Spider-Man Noir (Peter Parker)',
+        'Spider-Woman (Jessica Drew)',
+        'Spider-Ham (Peter Porker)'];
+    const data = {
+        labels: labels,
+        datasets: [{
+            data: [97, 89, 90, 110, 100, 120, 91, 98, 82, 112],
+            backgroundColor: [
+                'rgb(220, 38, 38, 0.3)',
+                'rgb(159, 18, 57, 0.3)',
+                'rgb(103, 232, 249, 0.3)',
+                'rgb(132, 204, 22, 0.3)',
+                'rgb(37, 99, 235, 0.3)',
+                'rgb(156, 163, 175, 0.3)',
+                'rgb(249, 115, 22, 0.3)',
+                'rgb(3, 7, 18, 0.3)',
+                'rgb(250, 204, 21, 0.3)',
+                'rgb(253, 164, 175, 0.3)'
+            ],
+            borderColor: [
+                '#dc2626',
+                '#9f1239',
+                '#67e8f9',
+                '#84cc16',
+                '#2563eb',
+                '#9ca3af',
+                '#f97316',
+                '#030712',
+                '#facc15',
+                '#fda4af'
+            ],
+            borderWidth: 2
+        }]
+    };
+    const config = {
+        type: 'bar',
+        data: data,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: "Spiders",
+                    font: {
+                        size: 30, // Tamanho da fonte da legenda
+                    },
+                    padding: 20,
+                },
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        },
+    };
+
+    const myChart = new Chart(ctx, config);
+
+
+
+    // FUNÇÕES DA API
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     let proximaAtualizacao;

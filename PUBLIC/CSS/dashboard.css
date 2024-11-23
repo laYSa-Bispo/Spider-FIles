@@ -58,12 +58,30 @@
     display: flex;
     background-color: aqua;
     height: 100%;
-    width: 60%;
+    width: 70%;
+    align-content: center;
+    justify-content: center;
 }
 
 .div_dashboard .dash_right {
     display: flex;
     background-color: darkorchid;
     height: 100%;
-    width: 40%;
+    width: 30%;
+}
+
+.div_dashboard .dash_left .box_grafico {
+    background-color: salmon;
+    height: 80%;
+    width: 90%;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+}
+
+.div_dashboard .dash_left .box_grafico .grafico {
+    background-color: white;
+    height: 90%;
+    width: 90%;
+    justify-self: center;
 }
