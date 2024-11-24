@@ -55,7 +55,7 @@
     /* background-color: gold; */
 }
 
-.div_dashboard .dash_left {
+.dash_left {
     display: flex;
     /* background-color: aqua; */
     height: 100%;
@@ -65,7 +65,7 @@
 }
 
 
-.div_dashboard .dash_left .box_grafico {
+.box_grafico {
     /* background-color: salmon; */
     border: solid black 5px;
     border-radius: 30px;
@@ -76,7 +76,7 @@
     justify-content: center;
 }
 
-.div_dashboard .dash_left .box_grafico .grafico {
+.grafico {
     /* background-color: white; */
     height: 100%;
     width: 100%;
@@ -84,7 +84,7 @@
     position: relative;
 }
 
-.div_dashboard .dash_left .box_grafico .grafico .div_slt {
+.div_slt {
     display: flex;
     position: absolute;
     /* background-color: crimson; */
@@ -102,7 +102,7 @@
     font-size: 20px;
 }
 
-.div_dashboard .dash_right {
+.dash_right {
     display: flex;
     /* background-color: darkorchid; */
     height: 100%;
@@ -111,7 +111,7 @@
     align-items: center;
 }
 
-.div_dashboard .dash_right .div_kpis {
+.div_kpis {
     display: flex;
     flex-direction: column;
     border: solid black 5px;
@@ -125,7 +125,7 @@
     margin-right: 3rem;
 }
 
-.div_dashboard .dash_right .div_kpis .kpi {
+.kpi {
   /* border: solid chartreuse 5px; */
   height: 100%;
   width: 100%;
@@ -133,7 +133,7 @@
   align-items: end;
 }
 
-.div_dashboard .dash_right .div_kpis .kpi .titulo_kpi {
+.titulo_kpi {
   border-bottom: solid black 3px;
   height: 10%;
   width: 60%;
@@ -149,7 +149,7 @@
   font-size: 40px;
 }
 
-.div_dashboard .dash_right .div_kpis .kpi .relatorio_kpi {
+.relatorio_kpi {
   /* border: solid red 5px; */
   display: flex;
   flex-direction: column;
@@ -159,11 +159,37 @@
   justify-items: center;
 }
 
-.div_dashboard .dash_right .div_kpis .kpi .relatorio_kpi span {
+.div_pergunta {
+  display: flex;
+  flex-direction: row;
   border-bottom: solid black 3px;
   height: 10%;
   width: 90%;
   font-family: "Anonymous Pro";
   font-size: 35px;
-  align-content: end;
+  align-items: flex-end;
+}
+
+#div_resposta1 {
+  color: red;
+}
+
+#div_resposta2 {
+  color: red;
+}
+
+#div_resposta3 {
+  color: red;
+}
+
+#div_resposta4 {
+  color: red;
+}
+
+#div_resposta5 {
+  color: red;
+}
+
+#div_resposta6 {
+  color: red;
 }
