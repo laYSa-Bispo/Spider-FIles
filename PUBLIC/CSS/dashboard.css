@@ -38,7 +38,7 @@
   text-align: center;
   align-content: center;
   justify-content: center;
-  height: 15%;
+  height: 10%;
   width: auto;
 }
 
@@ -51,7 +51,7 @@
 
 .div_dashboard {
     display: flex;
-    height: 85%;
+    height: 90%;
     /* background-color: gold; */
 }
 
@@ -104,7 +104,18 @@
 
 .div_dashboard .dash_right {
     display: flex;
-    background-color: darkorchid;
+    /* background-color: darkorchid; */
     height: 100%;
     width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_dashboard .dash_right .div_kpis {
+    border: solid black 5px;
+    border-radius: 30px;
+    height: 80%;
+    width: 90%;
+    align-self: center;
+    margin-right: 3rem;
 }
