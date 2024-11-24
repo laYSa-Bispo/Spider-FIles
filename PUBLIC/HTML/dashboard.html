@@ -28,7 +28,7 @@
                                         <option value="2">Vilões</option>
                                         <option value="3">Filmes</option>
                                         <option value="4">Atores</option>
-                                        <option value="5">HQ's</option>
+                                        <option value="5">Desenho</option>
                                         <option value="6">Jogos</option>
                                     </select>
                                 </div>
@@ -45,7 +45,7 @@
                                 <div class="relatorio_kpi">
                                     <div class="div_pergunta">
                                         Spider:
-                                        <div id="div_resposta1">1</div>                                    </span>
+                                        <div id="div_resposta1">1</div> </span>
                                     </div>
                                     <div class="div_pergunta">
                                         Vilão:
@@ -60,7 +60,7 @@
                                         <div id="div_resposta4">4</div>
                                     </div>
                                     <div class="div_pergunta">
-                                        HQ:
+                                        Desenho:
                                         <div id="div_resposta5">5</div>
                                     </div>
                                     <div class="div_pergunta">
@@ -141,7 +141,7 @@
                     display: true,
                     text: "Spiders",
                     font: {
-                        size: 40, 
+                        size: 40,
                         family: "Aboreto"
                     },
                     padding: 20,
@@ -160,6 +160,7 @@
 
     const myChart = new Chart(ctx, config);
 
+    //CONFIGURANDO OUTROS GRÁFICOS
     function sltChange(value) {
         if (value === "1") {
             slt1();
@@ -178,31 +179,93 @@
 
     function slt1() {
         myChart.data.datasets[0].data = [97, 89, 90, 110, 100, 120, 91, 98, 82, 112];
+        myChart.data.labels = ['Spider-Man (Peter Parker)',
+            'Spider-Man (Miles Morales)',
+            'Ghost Spider (Gwen Stacy)',
+            'Spider-Punk (Robbie Brown)',
+            'Spider-Man 2099 (Miguel O`Hara)',
+            'SP//dr (Peni Parker)',
+            'Spider-Man India (Pavitr Prabhakar)',
+            'Spider-Man Noir (Peter Parker)',
+            'Spider-Woman (Jessica Drew)',
+            'Spider-Ham (Peter Porker)'];
+        myChart.config.options.plugins.title.text = "Spiders";
         myChart.update();
     }
 
     function slt2() {
         myChart.data.datasets[0].data = [85, 92, 105, 123, 88, 110, 95, 99, 83, 127];
+        myChart.data.labels = ['Duende Verde',
+            'Doutor Octopus',
+            'Venom',
+            'Lagarto',
+            'Kraven',
+            'Homem Areia',
+            'Escorpião',
+            'Mistério',
+            'Electro',
+            'Abutre'];
+        myChart.config.options.plugins.title.text = "Vilões";
+        // myChart.data.datasets[0].backgroundColor[0] = "rgb(159, 18, 57, 0.3)";
         myChart.update();
     }
 
     function slt3() {
         myChart.data.datasets[0].data = [102, 87, 93, 115, 108, 121, 90, 96, 84, 113];
+        myChart.data.labels = ['Homem-Aranha (2002)',
+            'Homem-Aranha 2 (2004)',
+            'Homem-Aranha 3 (2007)',
+            'O Espetacular... (2012)',
+            'O Espetacular... 2 (2014)',
+            'De Volta ao Lar (2017)',
+            'Longe de Casa (2019)',
+            'Sem Volta para Casa (2021)',
+            'No Aranhaverso (2018)',
+            'Através do Aranhaverso (2023)',
+        ];
+        myChart.config.options.plugins.title.text = "Filmes";
         myChart.update();
     }
 
     function slt4() {
-        myChart.data.datasets[0].data = [99, 86, 91, 118, 107, 125, 89, 97, 81, 114];
+        myChart.data.datasets[0].data = [99, 86, 91];
+        myChart.data.labels = ['Tobey Maguire',
+            'Andrew Garfield',
+            'Tom Holland',
+        ];
+        myChart.config.options.plugins.title.text = "Atores";
         myChart.update();
     }
 
     function slt5() {
-        myChart.data.datasets[0].data = [104, 88, 94, 120, 109, 122, 92, 100, 85, 116];
+        myChart.data.datasets[0].data = [104, 88, 94, 120, 109, 122, 92, 100];
+        myChart.data.labels = ['Homem-Aranha (1967)',
+            'Homem-Aranha (1981)',
+            '...Incríveis Amigos (1981)',
+            'Homem-Aranha (1994)',
+            'Ação sem Limites (1999)',
+            'O Espetacular... (2008)',
+            'Ultimate Spider-Man (2012)',
+            'Marvel´s Spider-Man (2017)'
+        ];
+        myChart.config.options.plugins.title.text = "Desenhos";
         myChart.update();
     }
 
     function slt6() {
         myChart.data.datasets[0].data = [101, 90, 95, 117, 106, 124, 87, 98, 82, 115];
+        myChart.data.labels = ['The Amazing.. (GBA-1990)',
+            'Spider-Man (GBC-2000)',
+            'Spider-Man (PS2-2002)',
+            'Spider-Man 2 (PS2-2004)',
+            'Spider-Man 3 (PS3-2007)',
+            'Ultimate Spider-Man (Xbox-2005)',
+            'Friend or Foe (Xbox360-2007)',
+            'Marvel`s Spider-Man (PS4-2018)',
+            'Miles Morales (PS4-2020)',
+            'Marvel`s Spider-Man 2 (PS5-2023)',
+        ];
+        myChart.config.options.plugins.title.text = "Jogos";
         myChart.update();
     }
 
