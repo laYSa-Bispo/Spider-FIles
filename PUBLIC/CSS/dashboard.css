@@ -112,10 +112,56 @@
 }
 
 .div_dashboard .dash_right .div_kpis {
+    display: flex;
+    flex-direction: column;
     border: solid black 5px;
     border-radius: 30px;
     height: 80%;
     width: 90%;
     align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     margin-right: 3rem;
+}
+
+.div_dashboard .dash_right .div_kpis .kpi {
+  /* border: solid chartreuse 5px; */
+  height: 100%;
+  width: 100%;
+  align-self: center;
+}
+
+.div_dashboard .dash_right .div_kpis .kpi .titulo_kpi {
+  border-bottom: solid black 3px;
+  height: 10%;
+  width: 60%;
+  justify-self: center;
+  text-align: center;
+  align-content: end;
+}
+
+.div_dashboard .dash_right .div_kpis .kpi .titulo_kpi h1 {
+  font-family: "Aboreto";
+  font-size: 40px;
+}
+
+.div_dashboard .dash_right .div_kpis .kpi .relatorio_kpi {
+  /* border: solid red 5px; */
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  margin-top: 1rem;
+  padding-left: 2rem;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+
+.div_dashboard .dash_right .div_kpis .kpi .relatorio_kpi span {
+  border-bottom: solid black 3px;
+  height: 10%;
+  width: 90%;
+  font-family: "Anonymous Pro";
+  font-size: 35px;
+  align-content: end;
 }
