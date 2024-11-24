@@ -38,7 +38,7 @@
   text-align: center;
   align-content: center;
   justify-content: center;
-  height: 10vh;
+  height: 15%;
   width: auto;
 }
 
@@ -46,32 +46,29 @@
   font-family: "Fredericka the Great", serif;
   font-size: 80px;
   font-weight: lighter;
+  padding: 1rem;
 }
 
 .div_dashboard {
     display: flex;
-    height: 100%;
-    background-color: gold;
+    height: 85%;
+    /* background-color: gold; */
 }
 
 .div_dashboard .dash_left {
     display: flex;
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 100%;
     width: 70%;
     align-content: center;
     justify-content: center;
 }
 
-.div_dashboard .dash_right {
-    display: flex;
-    background-color: darkorchid;
-    height: 100%;
-    width: 30%;
-}
 
 .div_dashboard .dash_left .box_grafico {
-    background-color: salmon;
+    /* background-color: salmon; */
+    border: solid black 5px;
+    border-radius: 30px;
     height: 80%;
     width: 90%;
     align-content: center;
@@ -80,8 +77,34 @@
 }
 
 .div_dashboard .dash_left .box_grafico .grafico {
-    background-color: white;
-    height: 90%;
-    width: 90%;
+    /* background-color: white; */
+    height: 100%;
+    width: 100%;
     justify-self: center;
+    position: relative;
+}
+
+.div_dashboard .dash_left .box_grafico .grafico .div_slt {
+    display: flex;
+    position: absolute;
+    /* background-color: crimson; */
+    height: 30px;
+    padding-left: 2rem;
+    padding-top: 1.5rem;
+}
+
+.div_dashboard .dash_left .box_grafico .grafico .div_slt select {
+    width: 110px;
+    border: solid black 2px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Anonymous Pro";
+    font-size: 20px;
+}
+
+.div_dashboard .dash_right {
+    display: flex;
+    background-color: darkorchid;
+    height: 100%;
+    width: 30%;
 }

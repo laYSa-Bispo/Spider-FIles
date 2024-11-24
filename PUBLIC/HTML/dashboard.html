@@ -22,13 +22,27 @@
                     <div class="dash_left">
                         <div class="box_grafico">
                             <div class="grafico">
+                                <div class="div_slt">
+                                    <select id="slt_grafico" onchange="sltChange(this.value)">
+                                        <option value="1" selected>Spiders</option>
+                                        <option value="2">Vilões</option>
+                                        <option value="3">HQ's</option>
+                                        <option value="4">Atores</option>
+                                        <option value="5">Filmes</option>
+                                        <option value="6">Jogos</option>
+                                    </select>
+                                </div>
                                 <canvas id="myChart"></canvas>
                             </div>
                         </div>
                     </div>
                     <div class="dash_right">
-                        <div class="div_kpi"></div>
-                        <div class="div_imagem"></div>
+                        <div class="div_kpis">
+                            <div class="kpi1">
+                                <div class="titulo_kpi"></div>
+                                <div class="resposta_kpi"></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -100,7 +114,8 @@
                     display: true,
                     text: "Spiders",
                     font: {
-                        size: 30, // Tamanho da fonte da legenda
+                        size: 40, 
+                        family: "Aboreto"
                     },
                     padding: 20,
                 },
@@ -117,6 +132,52 @@
     };
 
     const myChart = new Chart(ctx, config);
+
+    function sltChange(value) {
+        if (value === "1") {
+            slt1();
+        } else if (value === "2") {
+            slt2();
+        } else if (value === "3") {
+            slt3();
+        } else if (value === "4") {
+            slt4();
+        } else if (value === "5") {
+            slt5();
+        } else if (value === "6") {
+            slt6();
+        }
+    }
+
+    function slt1() {
+        myChart.data.datasets[0].data = [97, 89, 90, 110, 100, 120, 91, 98, 82, 112];
+        myChart.update();
+    }
+
+    function slt2() {
+        myChart.data.datasets[0].data = [85, 92, 105, 123, 88, 110, 95, 99, 83, 127];
+        myChart.update();
+    }
+
+    function slt3() {
+        myChart.data.datasets[0].data = [102, 87, 93, 115, 108, 121, 90, 96, 84, 113];
+        myChart.update();
+    }
+
+    function slt4() {
+        myChart.data.datasets[0].data = [99, 86, 91, 118, 107, 125, 89, 97, 81, 114];
+        myChart.update();
+    }
+
+    function slt5() {
+        myChart.data.datasets[0].data = [104, 88, 94, 120, 109, 122, 92, 100, 85, 116];
+        myChart.update();
+    }
+
+    function slt6() {
+        myChart.data.datasets[0].data = [101, 90, 95, 117, 106, 124, 87, 98, 82, 115];
+        myChart.update();
+    }
 
 
 
