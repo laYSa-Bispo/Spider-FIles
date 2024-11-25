@@ -269,9 +269,61 @@
 }
 
 .card {
+    background-image: url("../Assets/card_quiz.jpg");
+    background-size: contain;
     width: 180px;
     height: 180px;
-    background: white;
+    /* background: white; */
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.card1 {
+    background-image: url("../Assets/card_quiz1.jpg");
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    /* background: white; */
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.card2 {
+    background-image: url("../Assets/card_quiz2.jpg");
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    /* background: white; */
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.card3 {
+    background-image: url("../Assets/card_quiz3.jpg");
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    /* background: white; */
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.card4 {
+    background-image: url("../Assets/card_quiz4.jpg");
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    /* background: white; */
+    border-radius: 10px;
+    transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+.card5 {
+    background-image: url("../Assets/card_quiz5.jpg");
+    background-size: contain;
+    width: 180px;
+    height: 180px;
+    /* background: white; */
     border-radius: 10px;
     transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
