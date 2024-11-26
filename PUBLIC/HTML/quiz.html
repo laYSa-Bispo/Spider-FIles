@@ -33,10 +33,13 @@
                                         <option value="Spider-Man (Miles Morales)">Spider-Man (Miles Morales)</option>
                                         <option value="Ghost Spider (Gwen Stacy)">Ghost Spider (Gwen Stacy)</option>
                                         <option value="Spider-Punk (Robbie Brown)">Spider-Punk (Robbie Brown)</option>
-                                        <option value="Spider-Man 2099 (Miguel O`Hara)">Spider-Man 2099 (Miguel O`Hara)</option>
+                                        <option value="Spider-Man 2099 (Miguel O`Hara)">Spider-Man 2099 (Miguel O`Hara)
+                                        </option>
                                         <option value="SP//dr (Peni Parker)">SP//dr (Peni Parker)</option>
-                                        <option value="Spider-Man India(Pavitr Prabhakar)">Spider-Man India(Pavitr Prabhakar)</option>
-                                        <option value="Spider-Man Noir (Peter Parker)">Spider-Man Noir (Peter Parker)</option>
+                                        <option value="Spider-Man India(Pavitr Prabhakar)">Spider-Man India(Pavitr
+                                            Prabhakar)</option>
+                                        <option value="Spider-Man Noir (Peter Parker)">Spider-Man Noir (Peter Parker)
+                                        </option>
                                         <option value="Spider-Woman (Jessica Drew)">Spider-Woman (Jessica Drew)</option>
                                         <option value="Spider-Ham (Peter Porker)">Spider-Ham (Peter Porker)</option>
                                     </select>
@@ -82,7 +85,8 @@
                                         <option value="Longe de Casa (2019)">Longe de Casa (2019)</option>
                                         <option value="Sem Volta para Casa (2021)">Sem Volta para Casa (2021)</option>
                                         <option value="No Aranhaverso (2018)">No Aranhaverso (2018)</option>
-                                        <option value="Através do Aranhaverso (2023)">Através do Aranhaverso (2023)</option>
+                                        <option value="Através do Aranhaverso (2023)">Através do Aranhaverso (2023)
+                                        </option>
                                     </select>
                                 </div>
                             </div>
@@ -137,11 +141,15 @@
                                         <option value="Spider-Man (PS2-2002)">Spider-Man (PS2-2002)</option>
                                         <option value="Spider-Man 2 (PS2-2004)">Spider-Man 2 (PS2-2004)</option>
                                         <option value="Spider-Man 3 (PS3-2007)">Spider-Man 3 (PS3-2007)</option>
-                                        <option value="Ultimate Spider-Man (Xbox-2005)">Ultimate Spider-Man (Xbox-2005)</option>
-                                        <option value="Friend or Foe (Xbox360-2007)">Friend or Foe (Xbox360-2007)</option>
-                                        <option value="Marvel`s Spider-Man (PS4-2018)">Marvel`s Spider-Man (PS4-2018)</option>
+                                        <option value="Ultimate Spider-Man (Xbox-2005)">Ultimate Spider-Man (Xbox-2005)
+                                        </option>
+                                        <option value="Friend or Foe (Xbox360-2007)">Friend or Foe (Xbox360-2007)
+                                        </option>
+                                        <option value="Marvel`s Spider-Man (PS4-2018)">Marvel`s Spider-Man (PS4-2018)
+                                        </option>
                                         <option value="Miles Morales (PS4-2020)">Miles Morales (PS4-2020)</option>
-                                        <option value="Marvel`s Spider-Man 2 (PS5-2023)">Marvel`s Spider-Man 2 (PS5-2023)</option>
+                                        <option value="Marvel`s Spider-Man 2 (PS5-2023)">Marvel`s Spider-Man 2
+                                            (PS5-2023)</option>
                                     </select>
                                 </div>
                             </div>
@@ -160,6 +168,39 @@
 
 <script>
 
+    function finalizar() {
+        var spiders = spiders.value
+        var viloes = viloes.value
+        var filmes = filmes.value
+        var atores = atores.value
+        var desenhos = desenhos.value
+        var jogos = jogos.value
 
+        fetch("/quiz/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                spiderServer: spiders,
+                viloesServer: viloes,
+                filmesServer: filmes,
+                atoresServer: atores,
+                desenhosServer: atores,
+                jogosServer: jogos,
+                idUserServer: sessionStorage.ID_USUARIO
+            })
+        })
+
+            .then(resposta => {
+                console.log(resposta)
+            })
+
+
+            .catch(function (erro) {
+                console.log(erro);
+            })
+
+    }
 
 </script>

@@ -79,14 +79,12 @@
 
                 resposta.json().then(json => {
                     console.log(json);
-                    console.log("Entrou aqui caraio");
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json.Email;
-                    sessionStorage.NOME_USUARIO = json.Usuario;
-                    sessionStorage.ID_USUARIO = json.idUsuario;
-
+                    sessionStorage.EMAIL_USUARIO = json[0].Email;
+                    sessionStorage.NOME_USUARIO = json[0].Usuario;
+                    sessionStorage.ID_USUARIO = json[0].idUsuario;
                     // Redirect the user to the dashboard.html page
-                    window.location = "./dashboard.html";
+                    window.location = "./quiz.html";
 
                 });
             } else {
