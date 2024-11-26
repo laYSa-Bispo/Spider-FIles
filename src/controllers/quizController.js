@@ -2,7 +2,7 @@ var quizModel = require("../models/quizModel");
 
 function cadastrar(req, res) {
   // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
-  var spiders = req.body.spidersServer;
+  var spiders = req.body.spiderServer;
   var viloes = req.body.viloesServer;
   var filmes = req.body.filmesServer;
   var atores = req.body.atoresServer;

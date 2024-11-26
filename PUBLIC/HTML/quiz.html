@@ -27,7 +27,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu Spider favorito?</h1>
                                 <div class="div_select">
-                                    <select id="spiders">
+                                    <select id="slt_spiders">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="Spider-Man (Peter Parker)">Spider-Man (Peter Parker)</option>
                                         <option value="Spider-Man (Miles Morales)">Spider-Man (Miles Morales)</option>
@@ -51,7 +51,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu vilão favorito?</h1>
                                 <div class="div_select">
-                                    <select id="viloes">
+                                    <select id="slt_viloes">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="Duende Verde">Duende Verde</option>
                                         <option value="Doutor Octopus">Doutor Octopus</option>
@@ -74,7 +74,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu filme favorito?</h1>
                                 <div class="div_select">
-                                    <select id="filmes">
+                                    <select id="slt_filmes">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="Homem-Aranha (2002)">Homem-Aranha (2002)</option>
                                         <option value="Homem-Aranha 2 (2004)">Homem-Aranha 2 (2004)</option>
@@ -96,7 +96,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu ator favorito?</h1>
                                 <div class="div_select">
-                                    <select id="atores">
+                                    <select id="slt_atores">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="Tobey Maguire">Tobey Maguire</option>
                                         <option value="Andrew Garfield">Andrew Garfield</option>
@@ -115,7 +115,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu desenho favorito?</h1>
                                 <div class="div_select">
-                                    <select id="desenhos">
+                                    <select id="slt_desenhos">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="Homem-Aranha (1967)">Homem-Aranha (1967)</option>
                                         <option value="Homem-Aranha (1981)">Homem-Aranha (1981)</option>
@@ -134,7 +134,7 @@
                             <div class="div_pergunta">
                                 <h1>Qual seu jogo favorito?</h1>
                                 <div class="div_select">
-                                    <select id="jogos">
+                                    <select id="slt_jogos">
                                         <option value="#">Selecione Uma Opção</option>
                                         <option value="The Amazing... (GBA-1990)">The Amazing... (GBA-1990)</option>
                                         <option value="Spider-Man (GBC-2000)">Spider-Man (GBC-2000)</option>
@@ -169,12 +169,12 @@
 <script>
 
     function finalizar() {
-        var spiders = spiders.value
-        var viloes = viloes.value
-        var filmes = filmes.value
-        var atores = atores.value
-        var desenhos = desenhos.value
-        var jogos = jogos.value
+        var spiders = slt_spiders.value
+        var viloes = slt_viloes.value
+        var filmes = slt_filmes.value
+        var atores = slt_atores.value
+        var desenhos = slt_desenhos.value
+        var jogos = slt_jogos.value
 
         fetch("/quiz/cadastrar", {
             method: "POST",
@@ -186,18 +186,15 @@
                 viloesServer: viloes,
                 filmesServer: filmes,
                 atoresServer: atores,
-                desenhosServer: atores,
+                desenhosServer: desenhos,
                 jogosServer: jogos,
                 idUserServer: sessionStorage.ID_USUARIO
             })
-        })
-
-            .then(resposta => {
-                console.log(resposta)
-            })
-
-
-            .catch(function (erro) {
+        }).then(resposta => {
+                if (resposta.ok) {
+                    window.location = "./dashboard.html";
+                }
+            }).catch(function (erro) {
                 console.log(erro);
             })
 
