@@ -269,7 +269,8 @@
 
 .card {
     background-image: url("../Assets/card_quiz.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
@@ -279,7 +280,9 @@
 
 .card1 {
     background-image: url("../Assets/card_quiz1.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
@@ -289,7 +292,8 @@
 
 .card2 {
     background-image: url("../Assets/card_quiz2.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
@@ -299,7 +303,8 @@
 
 .card3 {
     background-image: url("../Assets/card_quiz3.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
@@ -309,7 +314,8 @@
 
 .card4 {
     background-image: url("../Assets/card_quiz4.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
@@ -319,7 +325,8 @@
 
 .card5 {
     background-image: url("../Assets/card_quiz5.jpg");
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 180px;
     height: 180px;
     /* background: white; */
