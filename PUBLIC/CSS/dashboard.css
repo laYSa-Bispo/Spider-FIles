@@ -170,30 +170,42 @@
   height: 10%;
   width: 90%;
   font-family: "Anonymous Pro";
-  font-size: 35px;
+  font-size: 25px;
   align-items: flex-end;
 }
 
 #div_resposta1 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;
 }
 
 #div_resposta2 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;
 }
 
 #div_resposta3 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;
 }
 
 #div_resposta4 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;
 }
 
 #div_resposta5 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;
 }
 
 #div_resposta6 {
   color: red;
+  font-family: "Anonymous Pro";
+  font-size: 20px;  
 }

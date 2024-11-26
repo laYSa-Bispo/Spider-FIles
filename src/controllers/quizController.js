@@ -28,7 +28,7 @@ function cadastrar(req, res) {
     .catch(function (erro) {
       console.log(erro);
       console.log(
-        "\nHouve um erro ao realizar o cadastro! Erro: ",
+        "\nHouve um erro ao realizar o fim do quiz! Erro: ",
         erro.sqlMessage
       );
       res.status(500).json(erro.sqlMessage);
@@ -36,6 +36,117 @@ function cadastrar(req, res) {
 }
 // }
 
+function grafico_spiders(req, res) {
+  quizModel.grafico_spiders()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function grafico_viloes(req, res) {
+  quizModel.grafico_viloes()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function grafico_filmes(req, res) {
+  quizModel.grafico_filmes()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function grafico_atores(req, res) {
+  quizModel.grafico_atores()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function grafico_desenhos(req, res) {
+  quizModel.grafico_desenhos()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function grafico_jogos(req, res) {
+  quizModel.grafico_jogos()
+
+  .then(resposta => {
+    res.status(200).json(resposta);
+  })
+
+  .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o select! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+
+
+
 module.exports = {
   cadastrar,
+  grafico_spiders,
+  grafico_viloes,
+  grafico_filmes,
+  grafico_atores,
+  grafico_desenhos,
+  grafico_jogos
 };
+
