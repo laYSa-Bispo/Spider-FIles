@@ -1,5 +1,4 @@
-CREATE DATABASE Spider_Files;
-USE Spider_Files;
+USE Spider_files;
 
 CREATE TABLE Usuario (
 idUsuario INT PRIMARY KEY AUTO_INCREMENT,
@@ -271,6 +270,6 @@ LIMIT 1;
 
 
 
-desc usuario;
-select * from usuario;
-select * from quiz;
+desc Usuario;
+SELECT * FROM Usuario;
+SELECT * FROM Quiz;
