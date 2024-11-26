@@ -219,9 +219,6 @@ INSERT INTO Quiz (fkUsuario, Spiders, Viloes, Filmes, Atores, Desenhos, Jogos) V
 
 
 -- SELECTS PARA PLOTAR NOS GRÁFICOS
-SELECT PerguntaUm FROM Quiz
-	WHERE PerguntaUm = 2;
-
 SELECT Spiders, COUNT(Spiders) AS Qtd FROM Quiz GROUP BY Spiders;
 SELECT Viloes, COUNT(Viloes) AS Qtd FROM Quiz GROUP BY Viloes;
 SELECT Filmes AS 'Filme Favorito', COUNT(Filmes) AS Qtd FROM Quiz GROUP BY Filmes;
