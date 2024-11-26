@@ -140,7 +140,7 @@
 .titulo_kpi {
   border-bottom: solid black 3px;
   height: 10%;
-  width: 60%;
+  width: 50%;
   justify-self: center;
   align-items: flex-end;
   text-align: center;
@@ -148,9 +148,9 @@
   padding-top: 1rem;
 }
 
-.div_dashboard .dash_right .div_kpis .kpi .titulo_kpi h1 {
+.titulo_kpi h1 {
   font-family: "Aboreto";
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .relatorio_kpi {
@@ -168,7 +168,7 @@
   flex-direction: row;
   border-bottom: solid black 3px;
   height: 10%;
-  width: 90%;
+  width: 98%;
   font-family: "Anonymous Pro";
   font-size: 25px;
   align-items: flex-end;
