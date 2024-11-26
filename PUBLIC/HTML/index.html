@@ -61,7 +61,7 @@
                     <input type="text" id="ipt_nomeCtt" placeholder=" Nome...">
                     <input type="text" id="ipt_emailCtt" placeholder=" Email...">
                     <textarea id="textarea_msg" maxlength="240" rows="5" placeholder=" Mensagem..."></textarea>
-                    <button style="cursor: pointer;">Enviar</button>
+                    <button onclick="enviar()" style="cursor: pointer;">Enviar</button>
                 </div>
             </div>
         </section>
@@ -75,3 +75,57 @@
 </body>
 
 </html>
+
+<script>
+
+function enviar() {
+      // aguardar();
+  
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var nomeVar = ipt_nomeCtt.value;
+      var emailCttVar = ipt_emailCtt.value;
+      var textVar = textarea_msg.value;
+      
+  
+      // Verificando se há algum campo em branco
+      if (
+        nomeVar == "" ||
+        emailCttVar == "" ||
+        textVar == ""
+      ) {
+        return false;
+      }
+  
+      // Enviando o valor da nova input
+      fetch("/contato/enviar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          emailCttServer: emailCttVar,
+          textServer: textVar
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+  
+          if (resposta.ok) {
+            alert('Mensagem enviada com sucesso!')
+          } else {
+            throw "Houve um erro ao tentar enviar a mensagem!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          
+        });
+  
+      return false;
+    }
+
+</script>

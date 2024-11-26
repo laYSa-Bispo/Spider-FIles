@@ -216,6 +216,13 @@ INSERT INTO Quiz (fkUsuario, Spiders, Viloes, Filmes, Atores, Desenhos, Jogos) V
 (95, 'Spider-Man 2099 (Miguel O`Hara)', 'Venom', 'Através do Aranhaverso (2023)', 'Andrew Garfield', 'Ultimate Spider-Man (2012)', 'Spider-Man 2 (PS2-2004)'),
 (96, 'SP//dr (Peni Parker)', 'Homem Areia', 'Homem-Aranha 2 (2004)', 'Tom Holland', 'O Espetacular... (2008)', 'The Amazing... (GBA-1990)');
 
+CREATE TABLE Contato (
+idContato INT PRIMARY KEY AUTO_INCREMENT,
+Nome VARCHAR(45),
+Email VARCHAR(100),
+Mensagem VARCHAR(240)
+);
+
 
 -- SELECTS PARA PLOTAR NOS GRÁFICOS
 SELECT Spiders, COUNT(Spiders) AS Qtd FROM Quiz GROUP BY Spiders;
@@ -270,6 +277,6 @@ LIMIT 1;
 
 
 
-desc Usuario;
 SELECT * FROM Usuario;
 SELECT * FROM Quiz;
+SELECT * FROM Contato;
