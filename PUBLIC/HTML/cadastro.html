@@ -22,22 +22,22 @@
                     <h1>Cadastro</h1>
                     <div class="campoCad">
                         <span>Usuário:</span> 
-                        <input type="text" id="ipt_user">
+                        <input type="text" id="ipt_user" placeholder="AAA">
                     </div>
                     <div class="campoCad">
                         <span>E-mail:</span> 
-                        <input type="text" id="ipt_email">
+                        <input type="text" id="ipt_email" placeholder="peter@parker.com">
                     </div>
                     <div class="campoCad">
                         <span>Senha:</span> 
-                        <input type="password" id="ipt_senha">
+                        <input type="password" id="ipt_senha" placeholder="********">
                     </div>
                     <div class="campoCad">
                         <span>Confirmar Senha:</span>
-                        <input type="password" id="ipt_confirmar">
+                        <input type="password" id="ipt_confirmar" placeholder="********">
                     </div>
                     <div class="campoCad" >
-                        <button style="cursor: pointer;" onclick="cadastrar()">✔</button>
+                        <button style="cursor: pointer;" onclick="validarECadastrar()">✔</button>
                     </div>
                     <div class="red_login">
                       <span>Já possui Cadastro? Faça <a href="login.html" style="color: red;">Login</a> agora.</span>
@@ -59,7 +59,71 @@
 </html>
 
 <script>
-  
+
+    function validarCadastro() {
+      var msg = ';'
+
+        // Captura os valores dos campos
+        const userVar = ipt_user.value.trim();
+        const emailVar = ipt_email.value.trim();
+        const senhaVar = ipt_senha.value;
+        const confirmacaoSenhaVar = ipt_confirmar.value;
+
+        // Flag para controlar validação
+        let valido = true;
+
+        // Validação de Usuário
+        if (userVar.length < 3) {
+            alert('Usuário deve ter no mínimo 3 caracteres');
+            valido = false;
+        } 
+
+        // Validação de Email
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(emailVar)) {
+
+          msg =`Digite um email válido! 
+EX: peter@parker.com`
+
+            alert(msg);
+            valido = false;
+        }
+
+        // Validação de Senha
+        const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+        if (!senhaRegex.test(senhaVar)) {
+
+          msg = `Verifique se sua senha atual contém: 
+Pelo menos 8 caracteres;  
+Letras MAIÚSCULAS(A-Z) e minúsculas(a-z);
+Pelo menos um número; 
+Pelo menos um caractere especial (@$!%*?&);` 
+
+            alert(msg);
+            valido = false;
+        } 
+
+        // Validação de Confirmação de Senha
+        if (senhaVar !== confirmacaoSenhaVar) {
+
+          msg =`Sua senha NÃO foi confirmada!
+Verifique se os valores são iguais!`
+
+            alert(msg);
+            valido = false;
+        } 
+
+        return valido;
+    }
+
+    function validarECadastrar() {
+    
+        if (validarCadastro()) {
+            cadastrar();
+        }
+    }
+
+
     function cadastrar() {
       // aguardar();
   
