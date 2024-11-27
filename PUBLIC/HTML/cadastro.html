@@ -63,22 +63,22 @@
     function validarCadastro() {
       var msg = ''
 
-        // Captura os valores dos campos
-        const userVar = ipt_user.value.trim();
-        const emailVar = ipt_email.value.trim();
-        const senhaVar = ipt_senha.value;
-        const confirmacaoSenhaVar = ipt_confirmar.value;
+      const userVar = ipt_user.value.trim();
+      const emailVar = ipt_email.value.trim();
+      const senhaVar = ipt_senha.value;
+      const confirmacaoSenhaVar = ipt_confirmar.value;
 
-        // Flag para controlar validação
-        let valido = true;
+      let valido = true;
 
-        // Validação de Usuário
+
+
+        // VALIDAR USER
         if (userVar.length < 3) {
             alert('Usuário deve ter no mínimo 3 caracteres');
             valido = false;
         } 
 
-        // Validação de Email
+        // VALIDAR EMAIL
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(emailVar)) {
 
@@ -89,7 +89,7 @@ EX: peter@parker.com`
             valido = false;
         }
 
-        // Validação de Senha
+        // VALIDAR SENHA
         const senhaRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if (!senhaRegex.test(senhaVar)) {
 
@@ -103,7 +103,7 @@ Pelo menos um caractere especial (@$!%*?&);`
             valido = false;
         } 
 
-        // Validação de Confirmação de Senha
+        // CONFIRMAR SENHA
         if (senhaVar !== confirmacaoSenhaVar) {
 
           msg =`Sua senha NÃO foi confirmada!
@@ -141,6 +141,7 @@ Verifique se os valores são iguais!`
         senhaVar == "" ||
         confirmacaoSenhaVar == ""
       ) {
+        alert('Todos os campos devem ser preenchidos!')
         return false;
       }
   
